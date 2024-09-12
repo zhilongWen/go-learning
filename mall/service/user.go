@@ -78,3 +78,45 @@ func (service UserService) Register(ctx context.Context) serializer.Response {
 		Msg:    e.GetMsg(code),
 	}
 }
+
+// Login 用户登陆函数
+func (service UserService) Login(ctx context.Context) serializer.Response {
+
+	var user *model.User
+
+	code := e.SUCCESS
+
+	userDao := dao.NewUserDao(ctx)
+	user, exist, err := userDao.ExistOrNotByUserName(service.UserName)
+
+	if !exist {
+		code = e.ErrorUserNotFound
+		return serializer.Response{
+			Status: code,
+			Msg:    e.GetMsg(code),
+		}
+	}
+
+	if !user.CheckPassword(service.Password) {
+		code = e.ErrorNotCompare
+		return serializer.Response{
+			Status: code,
+			Msg:    e.GetMsg(code),
+		}
+	}
+
+	token, err := util.GenerateToken(user.ID, service.UserName, 0)
+	if err != nil {
+		code = e.ErrorAuthToken
+		return serializer.Response{
+			Status: code,
+			Msg:    e.GetMsg(code),
+		}
+	}
+
+	return serializer.Response{
+		Status: code,
+		Data:   serializer.TokenData{User: serializer.BuildUser(user), Token: token},
+		Msg:    e.GetMsg(code),
+	}
+}

@@ -23,6 +23,10 @@ var (
 	RedisAddr   string
 	RedisPw     string
 	RedisDbName string
+
+	PhotoHost        string
+	ProductPhotoPath string
+	AvatarPath       string
 )
 
 func Init() {
@@ -38,6 +42,7 @@ func Init() {
 	loadServer(file)
 	loadMysqlData(file)
 	//loadRedisData(file)
+	LoadPhotoPath(file)
 
 	// mysql 读
 	connReadPath := strings.Join([]string{
@@ -61,6 +66,12 @@ func Init() {
 	)
 
 	dao.Database(connReadPath, connWritePath)
+}
+
+func LoadPhotoPath(file *ini.File) {
+	PhotoHost = file.Section("path").Key("Host").String()
+	ProductPhotoPath = file.Section("path").Key("ProductPath").String()
+	AvatarPath = file.Section("path").Key("AvatarPath").String()
 }
 
 func loadServer(file *ini.File) {

@@ -2,9 +2,10 @@ package middleware
 
 import (
 	"fmt"
-	"github.com/gin-gonic/gin"
 	"net/http"
 	"strings"
+
+	"github.com/gin-gonic/gin"
 )
 
 // Cors 跨域
