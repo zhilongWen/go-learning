@@ -9,6 +9,13 @@ import (
 func main() {
 
 	fmt.Println("fff")
+	//
+	//if true {
+	//
+	//}
+	//else {   // unexpected name fmt after top level declaration ,non-declaration statement outside function body
+	//
+	//}
 
 	var age int
 	fmt.Println("请输入年龄: ")
@@ -22,7 +29,7 @@ func main() {
 
 	if age1 := 20; age1 > 18 {
 		fmt.Println("age1 大于 18 ，age1 = ", age1)
-	} else {
+		//} else {
 		// else 不能换行
 		//else {
 		fmt.Println("age1 小于 18")
