@@ -1,0 +1,30 @@
+swagger: "2.0"
+info:
+  title: ""
+  version: ""
+basePath: /
+paths:
+  /lock:
+    get:
+      operationId: DeadLock
+      consumes:
+      - '*/*'
+      produces:
+      - '*/*'
+  /metrics:
+    get:
+      operationId: PrometheusHandleFunc
+  /sayerror:
+    get:
+      operationId: Sayerror
+      consumes:
+      - '*/*'
+      produces:
+      - '*/*'
+  /sayhimessage:
+    get:
+      operationId: Sayhi
+      consumes:
+      - '*/*'
+      produces:
+      - '*/*'
