@@ -1,0 +1,7 @@
+servicecomb:
+  registry:
+      type: servicecenter        #optional: 默认类型为对接服务中心
+      address: http://127.0.0.1:30100
+  protocols:
+    rest:
+      listenAddress: 127.0.0.1:9000

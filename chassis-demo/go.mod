@@ -3,6 +3,11 @@ module chassis-demo
 go 1.23.0
 
 require (
+	github.com/go-chassis/go-chassis/v2 v2.7.1
+	github.com/go-chassis/openlog v1.1.3
+)
+
+require (
 	github.com/beorn7/perks v1.0.1 // indirect
 	github.com/cenkalti/backoff v2.0.0+incompatible // indirect
 	github.com/cenkalti/backoff/v4 v4.1.1 // indirect
@@ -13,10 +18,8 @@ require (
 	github.com/go-chassis/cari v0.7.1-0.20220815112157-2c62cc5ae1a3 // indirect
 	github.com/go-chassis/foundation v0.4.0 // indirect
 	github.com/go-chassis/go-archaius v1.5.1 // indirect
-	github.com/go-chassis/go-chassis/v2 v2.7.1 // indirect
 	github.com/go-chassis/go-restful-swagger20 v1.0.4-0.20220704025524-9243cbee26b7 // indirect
 	github.com/go-chassis/kie-client v0.0.0-20201210060018-938c7680a9ab // indirect
-	github.com/go-chassis/openlog v1.1.3 // indirect
 	github.com/go-chassis/sc-client v0.6.1-0.20220728072125-dacdd0c834bf // indirect
 	github.com/go-chassis/seclog v1.3.1-0.20210917082355-52c40864f240 // indirect
 	github.com/gogo/protobuf v1.3.2 // indirect
