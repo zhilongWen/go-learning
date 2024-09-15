@@ -1,0 +1,5 @@
+---
+#微服务的私有属性
+servicecomb:
+  service:
+    name: V2GrpServer

@@ -3,15 +3,18 @@ module chassis-demo
 go 1.23.0
 
 require (
+	github.com/go-chassis/go-chassis-extension/protocol/grpc v0.0.0-20230419082446-e6d56dd64094
 	github.com/go-chassis/go-chassis/v2 v2.7.1
 	github.com/go-chassis/openlog v1.1.3
+	google.golang.org/grpc v1.64.0
+	google.golang.org/protobuf v1.34.2
 )
 
 require (
 	github.com/beorn7/perks v1.0.1 // indirect
 	github.com/cenkalti/backoff v2.0.0+incompatible // indirect
 	github.com/cenkalti/backoff/v4 v4.1.1 // indirect
-	github.com/cespare/xxhash/v2 v2.1.2 // indirect
+	github.com/cespare/xxhash/v2 v2.2.0 // indirect
 	github.com/deckarep/golang-set v1.7.1 // indirect
 	github.com/emicklei/go-restful v2.15.1-0.20220703112237-d9c71e118c95+incompatible // indirect
 	github.com/fsnotify/fsnotify v1.4.7 // indirect
@@ -23,7 +26,7 @@ require (
 	github.com/go-chassis/sc-client v0.6.1-0.20220728072125-dacdd0c834bf // indirect
 	github.com/go-chassis/seclog v1.3.1-0.20210917082355-52c40864f240 // indirect
 	github.com/gogo/protobuf v1.3.2 // indirect
-	github.com/golang/protobuf v1.5.2 // indirect
+	github.com/golang/protobuf v1.5.4 // indirect
 	github.com/gorilla/websocket v1.4.3-0.20210424162022-e8629af678b7 // indirect
 	github.com/hashicorp/go-version v1.0.0 // indirect
 	github.com/json-iterator/go v1.1.12 // indirect
@@ -38,11 +41,11 @@ require (
 	github.com/prometheus/common v0.32.1 // indirect
 	github.com/prometheus/procfs v0.7.3 // indirect
 	github.com/spf13/cast v1.3.0 // indirect
-	golang.org/x/net v0.0.0-20210525063256-abc453219eb5 // indirect
-	golang.org/x/sys v0.0.0-20220114195835-da31bd327af9 // indirect
-	golang.org/x/text v0.3.7 // indirect
+	golang.org/x/net v0.22.0 // indirect
+	golang.org/x/sys v0.18.0 // indirect
+	golang.org/x/text v0.14.0 // indirect
 	golang.org/x/time v0.0.0-20210220033141-f8bda1e9f3ba // indirect
-	google.golang.org/protobuf v1.26.0 // indirect
+	google.golang.org/genproto v0.0.0-20210602131652-f16073e35f0c // indirect
 	gopkg.in/natefinch/lumberjack.v2 v2.0.0 // indirect
 	gopkg.in/yaml.v2 v2.4.0 // indirect
 	gopkg.in/yaml.v3 v3.0.0-20210107192922-496545a6307b // indirect
