@@ -28,6 +28,15 @@ func Router() *gin.Engine {
 		// /static/imgs/avatar
 		// /static/imgs/avatar/avatar.JPG
 
+		// 用户操作需要登陆保护
+		authed := v1.Group("/")
+		authed.Use(middleware.JWT())
+		{
+			// 用户操作
+			authed.PUT("user", api.UserUpdate)
+			authed.POST("avatar", api.UploadAvatar) // 上传头像
+		}
+
 	}
 
 	return router

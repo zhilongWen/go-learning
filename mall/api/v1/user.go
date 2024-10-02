@@ -3,6 +3,7 @@ package v1
 import (
 	"fmt"
 	"github.com/gin-gonic/gin"
+	util "mall/pkg/utils"
 	"mall/service"
 	"net/http"
 )
@@ -33,6 +34,31 @@ func UserLogin(c *gin.Context) {
 	if err := c.ShouldBind(&userLoginService); err == nil {
 
 		res := userLoginService.Login(c.Request.Context())
+		c.JSON(http.StatusOK, res)
+	} else {
+		c.JSON(http.StatusBadRequest, err)
+	}
+}
+
+func UserUpdate(c *gin.Context) {
+	var userUserUpdateService service.UserService
+	claims, _ := util.ParseToken(c.GetHeader("Authorization"))
+
+	if err := c.ShouldBind(&userUserUpdateService); err == nil {
+		res := userUserUpdateService.Update(c.Request.Context(), claims.ID)
+		c.JSON(http.StatusOK, res)
+	} else {
+		c.JSON(http.StatusBadRequest, err)
+	}
+}
+
+func UploadAvatar(c *gin.Context) {
+	file, fileHeader, _ := c.Request.FormFile("file")
+	fileSize := fileHeader.Size
+	uploadAvatarService := service.UserService{}
+	claims, _ := util.ParseToken(c.GetHeader("Authorization"))
+	if err := c.ShouldBind(&uploadAvatarService); err == nil {
+		res := uploadAvatarService.PostAvatar(c.Request.Context(), claims.ID, file, fileSize)
 		c.JSON(http.StatusOK, res)
 	} else {
 		c.JSON(http.StatusBadRequest, err)
