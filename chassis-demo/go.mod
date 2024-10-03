@@ -1,6 +1,6 @@
 module chassis-demo
 
-go 1.23.0
+go 1.22.1
 
 require (
 	github.com/go-chassis/go-chassis-extension/protocol/grpc v0.0.0-20230419082446-e6d56dd64094

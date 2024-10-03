@@ -1,0 +1,5 @@
+
+---
+servicecomb:
+  service:
+    name: RESTClient #name your consumer
