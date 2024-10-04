@@ -20,7 +20,7 @@ func (s *Server) SayHello(ref *restful.Context) {
 	}
 }
 
-// URLPatterns is a fixed method and only structs that implement it can be registered as a schema for the rest service
+// URLPatterns is a fixed method and only structs that implement it can be registered as a schemas for the rest service
 func (s *Server) URLPatterns() []restful.Route {
 	return []restful.Route{
 		{Method: http.MethodGet, Path: "/sayhello", ResourceFunc: s.SayHello},

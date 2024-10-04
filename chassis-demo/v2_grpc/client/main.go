@@ -30,7 +30,7 @@ func main() {
 	})
 	invoker := core.NewRPCInvoker()
 
-	//Invoke with micro service name, schema ID and operation ID
+	//Invoke with micro service name, schemas ID and operation ID
 	err := invoker.Invoke(
 		ctx,
 		"v2_grp_server",
