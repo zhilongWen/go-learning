@@ -38,6 +38,6 @@ func handleConnection(conn *net.TCPConn) {
 		}
 		fmt.Println("Received data:", string(buf[:str]))
 
-		conn.Write([]byte("server received your message:" + string(buf[:str])))
+		conn.Write([]byte("admin-be received your message:" + string(buf[:str])))
 	}
 }

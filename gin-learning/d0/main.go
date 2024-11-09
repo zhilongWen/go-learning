@@ -60,7 +60,7 @@ func main() {
 
 	err := r.Run(":8001")
 	if err != nil {
-		fmt.Println("Error starting server ", err)
+		fmt.Println("Error starting admin-be ", err)
 		return
 	}
 }
