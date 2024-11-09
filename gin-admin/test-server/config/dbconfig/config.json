@@ -1,0 +1,9 @@
+{
+  "admin": {
+    "userName": "root",
+    "password": "root123",
+    "path": "10.211.55.102:3306",
+    "dbname": "gin_admin_test",
+    "config": "charset=utf8&parseTime=True&loc=Local"
+  }
+}
